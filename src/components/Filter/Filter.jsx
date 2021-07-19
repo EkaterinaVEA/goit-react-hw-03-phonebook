@@ -8,14 +8,14 @@ export class Filter extends Component {
   state = {
     value: '',
   };
-  // = ({ onSetFilter, filterValue }) => (
 
   filterInputId = shortid();
 
   handleChangeFilter = e => {
-    this.setState({
-      [e.target.name]: e.target.value,
-    });
+    const { value } = e.target;
+
+    this.setState({ value });
+    this.props.onChange(value);
   };
 
   render() {

@@ -32,14 +32,15 @@ export const Button = styled.li`
   margin-right: 10px;
   font-size: 16px;
   padding: 5px;
-  color: var(--grey);
-  border: 1px solid #fff;
+  color: var(--yellow);
+  border: none;
+  /* box-shadow: -10px -10px 30px 0 #ffffff, 10px 10px 30px 0 #aeaec040; */
   border-radius: 20px;
   cursor: pointer;
   background-color: transparent;
   transition: all 250ms ease;
   &:hover {
-    color: #fff;
-    transform: scale(1.3);
+    border: 1px solid var(--yellow);
+    transform: scale(1.1);
   }
 `;

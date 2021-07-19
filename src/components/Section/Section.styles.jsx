@@ -11,6 +11,6 @@ export const Title = styled.h2`
   align-items: center;
   font-size: 50px;
   text-align: center;
-  color: #ffffff;
-  text-shadow: #33333340 1px 0 10px;
+  color: #727273;
+  /* text-shadow: #33333340 1px 0 10px; */
 `;

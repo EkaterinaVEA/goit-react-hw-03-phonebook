@@ -29,11 +29,9 @@ class App extends Component {
     });
   };
 
-  // handleChangeFilter = e => {
-  //   this.setState({
-  //     [e.target.name]: e.target.value,
-  //   });
-  // };
+  handleFilterInputChange = value => {
+    this.setState({ filter: value.toLowerCase() });
+  };
 
   render() {
     const contacts = FilterContacts(this.state.contacts, this.state.filter);
@@ -53,10 +51,7 @@ class App extends Component {
                 <RiContactsFill />
                 Contacts
               </h2>
-              <Filter
-                filterValue={this.state.filter}
-                // onSetFilter={this.handleChangeFilter}
-              />
+              <Filter filterValue={this.state.filter} onChange={this.handleFilterInputChange} />
               {contacts.length > 0 && (
                 <PhoneBookList onDeleteContact={this.handleDeleteContact} contacts={contacts} />
               )}

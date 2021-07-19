@@ -6,21 +6,21 @@ export const Main = styled.div`
   justify-content: space-between;
   margin: 0 auto;
   padding: 30px;
-  border-radius: 5px;
-  box-shadow: #33333340 0 0 10px 5px;
-  background-color: #d7d8db;
+  border-radius: 20px;
+  box-shadow: -10px -10px 30px 0 #ffffff, 10px 10px 30px 0 #aeaec040;
+  background-color: #f0f0f3;
   & h1,
   h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #aaabad;
+    color: #727273;
     font-size: 28px;
     margin-bottom: 50px;
     margin-top: 0;
     & svg {
       margin-right: 15px;
-      color: #fff;
+      color: #727273;
     }
   }
 `;

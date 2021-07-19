@@ -71,7 +71,8 @@ export const Button = styled.button`
   margin-right: auto;
   padding: 5px 10px;
   cursor: pointer;
-  border: 2px solid var(--yellow);
+  border: 1px solid #f0f0f3;
+  box-shadow: -10px -10px 30px 0 #ffffff, 10px 10px 30px 0 #aeaec040;
   border-radius: 20px;
   font-size: 20px;
   text-transform: uppercase;
@@ -79,8 +80,7 @@ export const Button = styled.button`
   background-color: transparent;
   transition: all 250ms ease-in-out;
   &:hover {
-    border-color: var(--yellow);
-    color: var(--yellow);
+    transform: scale(1.2);
   }
   & svg {
     margin-right: 10px;
