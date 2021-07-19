@@ -25,19 +25,19 @@ export const Input = styled.input`
   margin-bottom: 30px;
   padding-left: 40px;
   border: none;
-  border-bottom: 1px solid var(--yellow);
+  border-bottom: 1px solid var(--dark);
   font-size: 20px;
-  color: var(--yellow);
+  color: var(--dark);
   background-color: transparent;
   transition: all 250ms ease-in-out;
   &::placeholder {
     opacity: 0;
-    color: var(--yellow);
+    color: var(--dark);
     transition: opacity 250ms ease;
   }
   &:focus {
     outline: none;
-    border-bottom: 1px solid var(--yellow);
+    border-bottom: 1px solid var(--dark);
     &::placeholder {
       opacity: 0.7;
       transition-delay: 250ms;
@@ -48,9 +48,9 @@ export const Input = styled.input`
     font-size: 0;
     text-transform: uppercase;
     font-weight: 600;
-    color: var(--yellow);
+    color: var(--dark);
     & svg {
-      color: var(--yellow);
+      color: var(--dark);
     }
   }
 `;

@@ -22,13 +22,7 @@ const PhoneBookList = ({ contacts, onDeleteContact }) => {
 
 PhoneBookList.propTypes = {
   onDeleteContact: PropTypes.func.isRequired,
-  contacts: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string.isRequired,
-      name: PropTypes.string.isRequired,
-      number: PropTypes.number.isRequired,
-    }),
-  ),
+  contacts:PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)).isRequired,
 };
 
 export default PhoneBookList;

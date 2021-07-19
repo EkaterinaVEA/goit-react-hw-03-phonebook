@@ -1,7 +1,7 @@
-import { RiFilter2Line } from 'react-icons/ri';
 import PropTypes from 'prop-types';
 import shortid from 'shortid';
 import { Component } from 'react';
+import { RiFilter2Line } from 'react-icons/ri';
 import { FilterContainer, Label, Input } from './Filter.styles';
 
 export class Filter extends Component {
@@ -43,5 +43,5 @@ export class Filter extends Component {
 
 Input.propTypes = {
   value: PropTypes.string.isRequired,
-  onInput: PropTypes.func.isRequired,
+  onChange: PropTypes.func.isRequired,
 };

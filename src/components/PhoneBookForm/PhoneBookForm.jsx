@@ -1,12 +1,11 @@
+import PropTypes from 'prop-types';
+import { Component } from 'react';
+import shortid from 'shortid';
 import { Form, Label, Input, Button, ContainerForm } from './PhoneBookForm.styles';
 import { RiUserLine, RiPhoneLine, RiUserAddLine } from 'react-icons/ri';
-import Swal from 'sweetalert2';
-import shortid from 'shortid';
-import { Component } from 'react';
-import PropTypes from 'prop-types';
+
 
 export class PhoneBookForm extends Component {
-  // ({ onSetUserInfo, onAddContact, name, number }) => {
   state = {
     contacts: [],
     name: '',
@@ -23,31 +22,22 @@ export class PhoneBookForm extends Component {
     this.setState({ [name]: value });
   };
 
-  handleAddContact = e => {
+  resetForm = () => {
+    this.setState({ name: "", number: "" });
+  };
+
+  handleSubmit = (e) => {
     e.preventDefault();
-    if (this.state.contacts.some(el => el.name === this.state.name)) {
-      return Swal.fire({
-        position: 'center',
-        title: `Sorry, ${this.state.name} is already in contacts!`,
-      });
-    }
-    const contact = {
-      name: this.state.name,
-      number: this.state.number,
-      id: shortid.generate(),
-    };
-    this.setState(prev => ({
-      contacts: [...prev.contacts, contact],
-      name: '',
-      number: '',
-    }));
+
+    this.props.onSubmit(this.state);
+    this.resetForm();
   };
 
   render() {
     const { name, number } = this.state;
 
     return (
-      <Form onSubmit={this.handleAddContact} action="">
+      <Form onSubmit={this.handleSubmit} action="">
         <ContainerForm>
           <Input
             onChange={this.handleSetUserInfo}
@@ -96,10 +86,10 @@ export class PhoneBookForm extends Component {
 }
 
 PhoneBookForm.propTypes = {
-  onSubmit: PropTypes.func.isRequired,
+  onSubmit: PropTypes.func,
 };
 
 Input.propTypes = {
-  onInput: PropTypes.func.isRequired,
+  onChange: PropTypes.func.isRequired,
   value: PropTypes.string.isRequired,
 };

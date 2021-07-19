@@ -1,6 +1,6 @@
+import PropTypes from 'prop-types';
 import { Item, Button } from './PhoneBookListItem.styles';
 import { RiUserHeartFill } from 'react-icons/ri';
-import PropTypes from 'prop-types';
 
 const PhoneBookListItem = ({ name, number, id, onDeleteContact }) => {
   return (
@@ -19,7 +19,7 @@ const PhoneBookListItem = ({ name, number, id, onDeleteContact }) => {
 
 PhoneBookListItem.propTypes = {
   name: PropTypes.string.isRequired,
-  number: PropTypes.number.isRequired,
+  number: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
 };
 
